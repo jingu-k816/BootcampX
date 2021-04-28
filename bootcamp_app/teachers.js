@@ -17,7 +17,7 @@ const pool = new Pool({
   database: 'bootcampx'
 });
 
-pool.query()
+pool.query(queryString, values)
 .then(res => {
   res.rows.forEach(row => {
     console.log(`${row.cohort}: ${row.teacher}`);
